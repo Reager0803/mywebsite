@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-<title>Home</title>
+<title>Portfolio</title>
 
 </head>
 <body>
@@ -34,7 +34,12 @@
                 <li><strong>Graphics Programming:</strong> Created visual projects using OpenGL and WebGL, exploring shaders and rendering techniques</li>
                 <br></br>
                 <li><strong>Game Development (Pygame):</strong> Built interactive games with custom logic and UI using Python and Pygame</li>
-                <br></br>
+
+                <h1>
+                        <a href="app/">
+                                <button class="button"><span>Apps</span></button>
+                        </a>
+                </h1>  
 
         </div>
 
@@ -47,37 +52,25 @@
                 </li>
 
                 <h1>
-                        <div class="mycontainer">
+                        <h1>
+                        <a href="gl/">
+                                <button class="button"><span>OpenGL Projects</span></button>
+                        </a>
+                        </h1>
+        
+                        <h1>
+                        <a href="lang/">
+                                <button class="button"><span>PL Projects</span></button>
+                        </a>
+                        </h1>
+        
 
-                                <h1>
-                                <a href="gl/">
-                                        <button class="button">OpenGL Projects</button>
-                                </a>
-                                </h1>
-        
-                                <h1>
-                                <a href="lang/">
-                                        <button class="button">PL Projects</button>
-                                </a>
-                                </h1>
-        
-                        </div>
-        
-                        <div class="mycontainer">
-        
-                                <h1>
-                                <a href="game/">
-                                        <button class="button">Game Projects</button>
-                                </a>
-                                </h1>
-        
-                                <h1>
-                                <a href="app/">
-                                        <button class="button">Android App Projects</button>
-                                </a>
-                                </h1>
-        
-                        </div>
+                        <h1>
+                        <a href="game/">
+                                <button class="button"><span>Game Projects</span></button>
+                        </a>
+                        </h1>
+                              
                 </h1>
 
         </div>
@@ -152,12 +145,39 @@ img {
         border: 4px solid #999999;
         color: white;
         padding: 30px 64px;
-        width: 320px;
+        width: 400px;
         height: 160px;
         text-align: center;
         text-decoration: none;
+        transition: all 0.5s;
+        cursor: pointer;
         display: inline-block;
         font-size: 32px;
+}
+
+.button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+}
+
+.button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+}
+
+.button:hover span {
+        padding-right: 25px;
+}
+
+.button:hover span:after {
+        opacity: 1;
+        right: 0;
 }
 
 div.mycontainer {
